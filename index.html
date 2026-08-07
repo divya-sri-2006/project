@@ -1,73 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PaperNest - Stationery Shop</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Top Offer Bar -->
+    <!-- ================= TOP BAR ================= -->
+
     <div class="top-bar">
-        🎁 Free Shipping on orders above ₹499
-        <span>|</span>
-        Get <b>10% Off</b> on your first order!
+
+        <span>
+            🚚 Free Shipping on orders above ₹499
+        </span>
+
+        <span>
+            ❤️ Wishlist | 👤 My Account
+        </span>
+
     </div>
 
 
-    <!-- Header -->
+    <!-- ================= HEADER ================= -->
+
     <header class="header">
 
-        <!-- Logo -->
         <div class="logo">
-            <div class="logo-icon">✎</div>
-            <div>
-                <h1>PaperNest</h1>
-                <p>Stationery Shop</p>
-            </div>
+            ✏️ Paper<span>Nest</span>
         </div>
 
-
-        <!-- Search -->
         <div class="search-box">
-            <input type="text" placeholder="Search for products...">
-            <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search stationery products..."
+            >
+
+            <button onclick="searchProducts()">
+                🔍
             </button>
+
         </div>
 
+        <div class="cart">
 
-        <!-- Header Icons -->
-        <div class="header-icons">
+            🛒 My Cart
 
-            <div class="header-item">
-                <i class="fa-regular fa-user"></i>
-                <span>Login</span>
-            </div>
+            <span class="cart-count">
+                0
+            </span>
 
-            <div class="header-item">
-                <div class="icon-badge">
-                    <i class="fa-regular fa-heart"></i>
-                    <b>0</b>
-                </div>
-                <span>Wishlist</span>
-            </div>
-
-            <div class="header-item">
-                <div class="icon-badge">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <b>0</b>
-                </div>
-                <span>Cart</span>
+            <div class="cart-amount">
+                ₹0
             </div>
 
         </div>
@@ -75,272 +66,888 @@
     </header>
 
 
-    <!-- Navigation -->
+    <!-- ================= NAVIGATION ================= -->
+
     <nav class="navbar">
 
-        <a href="#" class="active">Home</a>
-        <a href="#">Products</a>
+        <a href="#home">🏠 Home</a>
 
-        <a href="#">
-            Categories
-            <i class="fa-solid fa-chevron-down"></i>
-        </a>
+        <a href="#products">🛍️ Products</a>
 
-        <a href="#">Offers</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="#offers">🏷️ Offers</a>
+
+        <a href="#about">ℹ️ About Us</a>
+
+        <a href="#contact">📞 Contact</a>
+
+        <a href="#cart">🛒 Cart</a>
 
     </nav>
 
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- ================= HOME ================= -->
 
-        <div class="hero-content">
+    <section id="home" class="hero">
+
+        <div>
+
+            <h1>
+                Make Your Ideas
+                <span>Beautiful!</span>
+            </h1>
+
+            <p>
+                Discover colourful stationery for school,
+                college, office and creativity.
+            </p>
+
+            <a href="#products" class="shop-btn">
+                Shop Now 🛍️
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <h2>
+            Shop By Category
+        </h2>
+
+        <div class="category-container">
+
+            <div class="category">
+                <div class="icon">🖊️</div>
+                <p>Pens</p>
+            </div>
+
+            <div class="category">
+                <div class="icon">✏️</div>
+                <p>Pencils</p>
+            </div>
+
+            <div class="category">
+                <div class="icon">📓</div>
+                <p>Notebooks</p>
+            </div>
+
+            <div class="category">
+                <div class="icon">🎨</div>
+                <p>Art & Craft</p>
+            </div>
+
+            <div class="category">
+                <div class="icon">📎</div>
+                <p>Office Supplies</p>
+            </div>
+
+            <div class="category">
+                <div class="icon">📐</div>
+                <p>Geometry</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section id="products" class="products">
+
+        <h2>
+            Featured Products 🛍️
+        </h2>
+
+        <div class="product-container">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <div style="font-size:100px; padding:30px;">
+                    🖊️
+                </div>
+
+                <h3>
+                    Gel Pen Set
+                </h3>
+
+                <p class="price">
+                    ₹120
+                </p>
+
+                <button class="add-cart">
+                    🛒 Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card">
+
+                <div style="font-size:100px; padding:30px;">
+                    📓
+                </div>
+
+                <h3>
+                    Premium Notebook
+                </h3>
+
+                <p class="price">
+                    ₹180
+                </p>
+
+                <button class="add-cart">
+                    🛒 Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card">
+
+                <div style="font-size:100px; padding:30px;">
+                    ✏️
+                </div>
+
+                <h3>
+                    Color Pencils
+                </h3>
+
+                <p class="price">
+                    ₹150
+                </p>
+
+                <button class="add-cart">
+                    🛒 Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card">
+
+                <div style="font-size:100px; padding:30px;">
+                    🎨
+                </div>
+
+                <h3>
+                    Art Kit
+                </h3>
+
+                <p class="price">
+                    ₹350
+                </p>
+
+                <button class="add-cart">
+                    🛒 Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+
+            <div class="product-card">
+
+                <div style="font-size:100px; padding:30px;">
+                    🖍️
+                </div>
+
+                <h3>
+                    Crayon Set
+                </h3>
+
+                <p class="price">
+                    ₹100
+                </p>
+
+                <button class="add-cart">
+                    🛒 Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+
+            <div class="product-card">
+
+                <div style="font-size:100px; padding:30px;">
+                    📐
+                </div>
+
+                <h3>
+                    Geometry Box
+                </h3>
+
+                <p class="price">
+                    ₹180
+                </p>
+
+                <button class="add-cart">
+                    🛒 Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 7 -->
+
+            <div class="product-card">
+
+                <div style="font-size:100px; padding:30px;">
+                    🎒
+                </div>
+
+                <h3>
+                    School Bag
+                </h3>
+
+                <p class="price">
+                    ₹650
+                </p>
+
+                <button class="add-cart">
+                    🛒 Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 8 -->
+
+            <div class="product-card">
+
+                <div style="font-size:100px; padding:30px;">
+                    📔
+                </div>
+
+                <h3>
+                    Daily Diary
+                </h3>
+
+                <p class="price">
+                    ₹220
+                </p>
+
+                <button class="add-cart">
+                    🛒 Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OFFERS ================= -->
+
+    <section id="offers" class="offers-section">
+
+        <div class="section-title">
 
             <h2>
-                Your One Stop
-                <span>Stationery Shop!</span>
+                Special Offers 🎉
             </h2>
 
             <p>
-                Find everything you need for school, office
-                and creative ideas.
+                Great stationery at amazing prices!
             </p>
 
-            <button class="shop-btn">
-                Shop Now
-                <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+
+        <div class="offers-container">
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🎒
+                </div>
+
+                <h3>
+                    School Essentials
+                </h3>
+
+                <p>
+                    Get up to <strong>30% OFF</strong>
+                </p>
+
+                <button onclick="location.href='#products'">
+                    Shop Now
+                </button>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    📓
+                </div>
+
+                <h3>
+                    Notebook Offer
+                </h3>
+
+                <p>
+                    Buy 2 Notebooks & Get 1 FREE
+                </p>
+
+                <button onclick="location.href='#products'">
+                    Shop Now
+                </button>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Art Supplies
+                </h3>
+
+                <p>
+                    Save up to <strong>25% OFF</strong>
+                </p>
+
+                <button onclick="location.href='#products'">
+                    Shop Now
+                </button>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🖊️
+                </div>
+
+                <h3>
+                    Pen Collection
+                </h3>
+
+                <p>
+                    Starting from <strong>₹99</strong>
+                </p>
+
+                <button onclick="location.href='#products'">
+                    Shop Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="coupon-box">
+
+            🎁 Use Coupon Code:
+
+            <strong>
+                PAPER20
+            </strong>
+
+            — Get
+
+            <strong>
+                20% OFF
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about-section">
+
+        <div class="section-title">
+
+            <h2>
+                About PaperNest ✏️
+            </h2>
+
+            <p>
+                Your one-stop destination for all your stationery needs.
+            </p>
+
+        </div>
+
+
+        <div class="about-section">
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    📚
+                </div>
+
+                <h2>
+                    Who We Are
+                </h2>
+
+                <p>
+                    PaperNest is a modern stationery shop providing
+                    quality and affordable products for students,
+                    artists, teachers and office users.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🎯
+                </div>
+
+                <h2>
+                    Our Mission
+                </h2>
+
+                <p>
+                    Our mission is to make stationery shopping simple,
+                    convenient and enjoyable for everyone.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    💖
+                </div>
+
+                <h2>
+                    Why Choose Us?
+                </h2>
+
+                <p>
+                    We provide quality products, affordable prices,
+                    fast delivery and friendly customer support.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+        <div class="section-title">
+
+            <h2>
+                Contact Us 📞
+            </h2>
+
+            <p>
+                We would love to hear from you!
+            </p>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <h2>
+                    Get In Touch 💜
+                </h2>
+
+
+                <div class="contact-item">
+
+                    <span>📍</span>
+
+                    <div>
+
+                        <h3>
+                            Address
+                        </h3>
+
+                        <p>
+                            PaperNest Stationery Shop<br>
+                            Chennai, Tamil Nadu, India
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>📞</span>
+
+                    <div>
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <p>
+                            +91 98765 43210
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>📧</span>
+
+                    <div>
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <p>
+                            support@papernest.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>🕐</span>
+
+                    <div>
+
+                        <h3>
+                            Working Hours
+                        </h3>
+
+                        <p>
+                            Monday - Saturday<br>
+                            9:00 AM - 7:00 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form">
+
+                <h2>
+                    Send Us a Message 💌
+                </h2>
+
+
+                <form onsubmit="sendMessage(event)">
+
+                    <label>
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contactName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+
+                    <label>
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        placeholder="Enter your phone number"
+                    >
+
+
+                    <label>
+                        Message
+                    </label>
+
+                    <textarea
+                        rows="5"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+
+                    <button type="submit">
+                        Send Message 📩
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🚚
+            </div>
+
+            <h3>
+                Fast Delivery
+            </h3>
+
+            <p>
+                Quick and safe delivery
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💰
+            </div>
+
+            <h3>
+                Best Prices
+            </h3>
+
+            <p>
+                Affordable stationery
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <h3>
+                Secure Payment
+            </h3>
+
+            <p>
+                Safe checkout
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ⭐
+            </div>
+
+            <h3>
+                Best Quality
+            </h3>
+
+            <p>
+                Quality products
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <div>
+
+            <h2>
+                Join Our Newsletter 💌
+            </h2>
+
+            <p>
+                Get updates about new products and offers.
+            </p>
+
+        </div>
+
+        <div>
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email"
+            >
+
+            <button onclick="subscribeNewsletter()">
+                Subscribe
             </button>
 
         </div>
 
-        <div class="hero-products">
-
-            <div class="pencils">
-                ✏️ ✏️ ✏️ ✏️ ✏️
-            </div>
-
-            <div class="notebooks">
-                📚
-            </div>
-
-            <div class="backpack">
-                🎒
-            </div>
-
-        </div>
-
     </section>
 
 
-    <!-- Service Section -->
-    <section class="services">
+    <!-- ================= FOOTER ================= -->
 
-        <div class="service">
-            <i class="fa-solid fa-truck"></i>
-            <div>
-                <h3>Free Shipping</h3>
-                <p>On orders above ₹499</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <i class="fa-solid fa-shield-halved"></i>
-            <div>
-                <h3>Secure Payment</h3>
-                <p>100% secure payments</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <i class="fa-solid fa-rotate"></i>
-            <div>
-                <h3>Easy Returns</h3>
-                <p>7 days return policy</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <i class="fa-solid fa-headset"></i>
-            <div>
-                <h3>Customer Support</h3>
-                <p>We are here to help</p>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- Featured Products -->
-    <section class="products-section">
-
-        <h2>Featured Products</h2>
-
-        <div class="title-line">
-            <span></span>
-            ♥
-            <span></span>
-        </div>
-
-
-        <div class="product-container">
-
-            <!-- Product 1 -->
-            <div class="product-card">
-
-                <div class="product-image">
-                    🖊️
-                </div>
-
-                <h3>Color Gel Pens</h3>
-
-                <p class="product-info">
-                    Set of 10
-                </p>
-
-                <h4>₹199</h4>
-
-                <button class="cart-btn">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Product 2 -->
-            <div class="product-card">
-
-                <div class="product-image">
-                    📓
-                </div>
-
-                <h3>A5 Spiral Notebook</h3>
-
-                <p class="product-info">
-                    Premium Quality
-                </p>
-
-                <h4>₹120</h4>
-
-                <button class="cart-btn">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Product 3 -->
-            <div class="product-card">
-
-                <div class="product-image">
-                    🖍️
-                </div>
-
-                <h3>Highlighter Set</h3>
-
-                <p class="product-info">
-                    5 Pieces
-                </p>
-
-                <h4>₹150</h4>
-
-                <button class="cart-btn">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Product 4 -->
-            <div class="product-card">
-
-                <div class="product-image">
-                    📐
-                </div>
-
-                <h3>Geometry Box</h3>
-
-                <p class="product-info">
-                    Complete Set
-                </p>
-
-                <h4>₹250</h4>
-
-                <button class="cart-btn">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Product 5 -->
-            <div class="product-card">
-
-                <div class="product-image">
-                    🖍️
-                </div>
-
-                <h3>Sketch Pens</h3>
-
-                <p class="product-info">
-                    12 Shades
-                </p>
-
-                <h4>₹180</h4>
-
-                <button class="cart-btn">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Product 6 -->
-            <div class="product-card">
-
-                <div class="product-image">
-                    📎
-                </div>
-
-                <h3>Mini Stapler</h3>
-
-                <p class="product-info">
-                    Compact Size
-                </p>
-
-                <h4>₹99</h4>
-
-                <button class="cart-btn">
-                    Add to Cart
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
     <footer>
 
-        <h2>PaperNest</h2>
+        <h3>
+            PaperNest ✏️
+        </h3>
 
         <p>
-            Your favorite stationery shop for school,
-            office and creative needs.
+            All Your Stationery Needs
         </p>
 
-        <p class="copyright">
-            © 2026 PaperNest Stationery Shop. All Rights Reserved.
+        <br>
+
+        <p>
+            © 2026 PaperNest. All Rights Reserved.
         </p>
 
     </footer>
 
 
-    <!-- JavaScript -->
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script src="script.js"></script>
 
+
+    <script>
+
+        /* CONTACT FORM */
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("contactName").value;
+
+            alert(
+                "Thank you, " +
+                name +
+                "! Your message has been sent successfully. 💜"
+            );
+
+            event.target.reset();
+        }
+
+
+        /* NEWSLETTER */
+
+        function subscribeNewsletter() {
+
+            const email =
+                document.getElementById("newsletterEmail").value;
+
+            if (email === "") {
+
+                alert("Please enter your email address.");
+
+                return;
+            }
+
+            alert(
+                "Thank you for subscribing to PaperNest! 💜"
+            );
+
+            document.getElementById("newsletterEmail").value = "";
+        }
+
+
+        /* SEARCH */
+
+        function searchProducts() {
+
+            const search =
+                document
+                .getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+            const products =
+                document.querySelectorAll(".product-card");
+
+            products.forEach(function(product) {
+
+                const name =
+                    product
+                    .querySelector("h3")
+                    .innerText
+                    .toLowerCase();
+
+                if (name.includes(search)) {
+
+                    product.style.display = "block";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
 </body>
+
 </html>
