@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products - PaperNest</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8fc;
+            color: #222;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            font-size: 40px;
+        }
+
+        .logo h1 {
+            color: #593b9b;
+            font-size: 30px;
+        }
+
+        .logo p {
+            color: #ed3b7b;
+        }
+
+        .search {
+            display: flex;
+            width: 40%;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .search input {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            outline: none;
+        }
+
+        .search button {
+            width: 55px;
+            border: none;
+            background: #6845ad;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #6845ad;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 17px 25px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #ed3b7b;
+        }
+
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            padding: 40px 20px 25px;
+        }
+
+        .page-title h2 {
+            color: #593b9b;
+            font-size: 35px;
+        }
+
+        .page-title p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        /* Categories */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 10px 5% 30px;
+        }
+
+        .category {
+            padding: 10px 22px;
+            border: 1px solid #6845ad;
+            border-radius: 20px;
+            color: #6845ad;
+            background: white;
+            cursor: pointer;
+        }
+
+        .category:hover {
+            background: #6845ad;
+            color: white;
+        }
+
+        /* Product Grid */
+        .products {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 18px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .product-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+            background: #fff4f9;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            color: #777;
+            font-size: 14px;
+            min-height: 35px;
+        }
+
+        .price {
+            color: #ed3b7b;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 12px;
+        }
+
+        .cart-btn {
+            background: #6845ad;
+            color: white;
+            border: none;
+            padding: 11px 25px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .cart-btn:hover {
+            background: #ed3b7b;
+        }
+
+        /* Footer */
+        footer {
+            background: #593b9b;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1000px) {
+            .products {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .search {
+                width: 30%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .search {
+                width: 90%;
+            }
+
+            nav a {
+                padding: 12px;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            <div class="logo-icon">✏️</div>
+
+            <div>
+                <h1>PaperNest</h1>
+                <p>Stationery Shop</p>
+            </div>
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button>🔍</button>
+        </div>
+
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="#">Categories</a>
+        <a href="#">Offers</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <h2>Our Stationery Products 🛍️</h2>
+        <p>Choose your favorite stationery items from our collection.</p>
+    </section>
+
+    <!-- Categories -->
+    <div class="categories">
+        <div class="category">All</div>
+        <div class="category">Pens</div>
+        <div class="category">Notebooks</div>
+        <div class="category">Art Supplies</div>
+        <div class="category">School Supplies</div>
+        <div class="category">Office Supplies</div>
+    </div>
+
+    <!-- Products -->
+    <section class="products">
+
+        <div class="product-card">
+            <div class="product-image">🖊️</div>
+            <h3>Color Gel Pens</h3>
+            <p class="description">Set of 10 colorful gel pens</p>
+            <div class="price">₹199</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">📓</div>
+            <h3>A5 Spiral Notebook</h3>
+            <p class="description">Premium ruled notebook</p>
+            <div class="price">₹120</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">🖍️</div>
+            <h3>Highlighter Set</h3>
+            <p class="description">Set of 5 bright highlighters</p>
+            <div class="price">₹150</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">📐</div>
+            <h3>Geometry Box</h3>
+            <p class="description">Complete geometry set</p>
+            <div class="price">₹250</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">🎨</div>
+            <h3>Sketch Pens</h3>
+            <p class="description">12 colorful sketch pens</p>
+            <div class="price">₹180</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">📎</div>
+            <h3>Mini Stapler</h3>
+            <p class="description">Compact office stapler</p>
+            <div class="price">₹99</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">✏️</div>
+            <h3>HB Pencil Set</h3>
+            <p class="description">Pack of 12 HB pencils</p>
+            <div class="price">₹80</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">📒</div>
+            <h3>Daily Planner</h3>
+            <p class="description">Beautiful daily planner book</p>
+            <div class="price">₹220</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>PaperNest Stationery Shop</h2>
+        <p>Your one-stop shop for school, office and creative supplies.</p>
+        <p>📞 +91 98765 43210 | ✉️ papernest@example.com</p>
+        <p>© 2026 PaperNest. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
