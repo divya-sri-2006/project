@@ -1,7 +1,7 @@
 // Cart
-let cartCount = 0;
-let cartTotal = 0;
-
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+let cartTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 // Add to Cart
 const cartButtons = document.querySelectorAll(".add-cart");
 
