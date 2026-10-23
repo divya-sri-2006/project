@@ -12,11 +12,24 @@ cartButtons.forEach(button => {
         const priceText = productCard.querySelector(".price").innerText;
 
         const price = parseInt(priceText.replace("₹", "").replace(",", ""));
+const name = productCard.querySelector("h3").innerText.trim();
+const existing = cart.find(item => item.name === name);
 
-        cartCount++;
-        cartTotal += price;
+if (existing) {
+    existing.quantity++;
+} else {
+    cart.push({
+        name: name,
+        price: price,
+        quantity: 1
+    });
+}
 
-        updateCart();
+cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+cartTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+localStorage.setItem("cart", JSON.stringify(cart));
+updateCart();
 
         this.innerText = "✓ Added to Cart";
 
